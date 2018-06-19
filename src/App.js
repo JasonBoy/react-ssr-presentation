@@ -1,6 +1,15 @@
 import React, {Component} from 'react';
+import g from 'glamorous';
 import {Fullpage, HorizontalSlider, Slide} from 'fullpage-react';
 import './App.css';
+
+const Wrapper = g.div({
+  position: 'absolute',
+  margin: 0,
+  left: '50%',
+  top: '50%',
+  transform: 'translate(-50%, -50%)',
+});
 
 class App extends Component {
 
@@ -37,18 +46,66 @@ class App extends Component {
       <Slide> Slide 2.2 </Slide>
     ];
 
-    const slides = [
-      <Slide> Slide 1 </Slide>,
+    fullPageOptions.slides = [
+      this.getTitle(),
+      this.getTableOfContents(),
+      this.historyOfWebApps(),
       <HorizontalSlider {...horizontalSliderProps}></HorizontalSlider>,
       <Slide> Slide 3 </Slide>
     ];
-    fullPageOptions.slides = slides;
 
     this.setState({fullPageOptions});
   }
 
+  getTitle() {
+    const ele = (
+      <Wrapper>
+        <g.H1 margin={0}>
+          ⚛️ React Server Side Rendering
+        </g.H1>
+      </Wrapper>
+    );
+    return this.genSlide(ele);
+  }
 
+  getTableOfContents() {
+    const ele = (
+      <Wrapper>
+        <g.Ul fontSize={24} lineHeight={2.4}>
+          <g.Li>📜 Brief History of Web Apps</g.Li>
+          <g.Li>🚨 SPA Issues</g.Li>
+          <g.Li>🎉 SSR Comes to Rescue</g.Li>
+          <g.Li>
+            ✅ React SSR Demo:
+            <g.Ul fontSize={16}>
+              <g.Li>Code-Splitting with React-Loadable</g.Li>
+              <g.Li>Make it Work for SSR</g.Li>
+              <g.Li>Use React-16 Streaming API</g.Li>
+            </g.Ul>
+          </g.Li>
+          <g.Li>🦄 What's Next?</g.Li>
+        </g.Ul>
+      </Wrapper>
+    );
+    return this.genSlide(ele);
+  }
 
+  historyOfWebApps() {
+    const ele = (
+      <Wrapper>
+
+      </Wrapper>
+    );
+    return this.genSlide(ele);
+  }
+
+  genSlide(slide) {
+    return (
+      <Slide>
+        {slide}
+      </Slide>
+    );
+  }
 
   render() {
     if(!this.state.fullPageOptions) return null;
