@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import g from 'glamorous';
 import {Fullpage, HorizontalSlider, Slide} from 'fullpage-react';
 import './App.css';
+import logo from './logo.svg';
 
 const Wrapper = g.div({
   position: 'absolute',
@@ -61,7 +62,8 @@ class App extends Component {
     const ele = (
       <Wrapper>
         <g.H1 margin={0}>
-          ⚛️ React Server Side Rendering
+          <g.Img verticalAlign="middle" src={logo} className="App-logo" alt="logo" />
+          <g.Span verticalAlign="middle">React Server Side Rendering</g.Span>
         </g.H1>
       </Wrapper>
     );
