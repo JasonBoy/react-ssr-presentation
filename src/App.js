@@ -76,7 +76,7 @@ class App extends Component {
         <g.Ul fontSize={24} lineHeight={2.4}>
           <g.Li>📜 Brief History of Web Apps</g.Li>
           <g.Li>🚨 SPA Issues</g.Li>
-          <g.Li>🎉 SSR Comes to Rescue</g.Li>
+          <g.Li>🎉 SSR Comes to the Rescue</g.Li>
           <g.Li>
             ✅ React SSR Demo:
             <g.Ul fontSize={16}>
