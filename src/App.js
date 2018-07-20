@@ -92,7 +92,7 @@ class App extends Component {
           'Use React-16 Streaming API',
         ]
       },
-      '🦄 What\'s Next?',
+      '🦄 What\'s next?',
     ]
   };
 
@@ -563,7 +563,7 @@ class App extends Component {
           <TitleHeader>{title}</TitleHeader>
           <g.Ul>
             <g.Li>SEO</g.Li>
-            <g.Li>AboveTheFold(FirstMeaningfulPaint 首屏性能)</g.Li>
+            <g.Li>FirstMeaningfulPaint 首屏性能</g.Li>
           </g.Ul>
         </ContentWrapper>
       </Wrapper>
@@ -587,7 +587,7 @@ class App extends Component {
     horizontalSliderProps.slides.push(this.genSlide((
       <Wrapper>
         <ContentWrapper>
-          <TitleHeader className={centerStyle}>AboveTheFold(FirstMeaningfulPaint 首屏性能)</TitleHeader>
+          <TitleHeader className={centerStyle}>FirstMeaningfulPaint 首屏性能</TitleHeader>
           <g.Div textAlign="center">
             <g.Img display="inline-block"
                    height={500}
